@@ -92,12 +92,12 @@ public class WindSpeed
         North, South, WestSouthWest
     }
     
-    switch (direction) 
+    /*switch (direction) 
     {
-        case int i when i >=<= 11.25:
+        case int i when i >=0 && i <= 11.25:
             return "N";
             break;
-        case <= 33.75:
+        case int i when i <= 33.75:
             return "NNE";
             break;
         case <= 56.25:
@@ -148,5 +148,5 @@ public class WindSpeed
         default:
             Console.WriteLine("Not a compass heading");
             break;
-    }
+    }*/
 }
