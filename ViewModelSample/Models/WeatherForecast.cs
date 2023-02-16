@@ -85,68 +85,56 @@ public class WindSpeed
 {
     public double Speed { get; set; }
 
-    public Direction WindDirection { get; set; }
+    public double WindDirection { get; set; }
 
     public enum Direction
     {
         North, South, WestSouthWest
     }
+
     
-    /*switch (direction) 
+
+    public string WindDirectionLetters(double WindDirection)
     {
-        case int i when i >=0 && i <= 11.25:
-            return "N";
-            break;
-        case int i when i <= 33.75:
-            return "NNE";
-            break;
-        case <= 56.25:
-            return "NE";
-            break;
-        case <= 78.25:
-            return "ENE";
-            break;
-        case <= 101.25:
-            return "E";
-            break;
-        case <= 123.75:
-            return "ESE";
-            break;
-        case <= 146.25:
-            return "SE";
-            break;
-        case <= 168.75:
-            return "SSE";
-            break;
-        case <= 191.25:
-            return "S";
-            break;
-        case <= 213.75:
-            return "SSW";
-            break;
-        case <= 236.25:
-            return "SW";
-            break;
-        case <= 258.75:
-            return "WSW";
-            break;
-        case <= 281.25:
-            return "W";
-            break;
-        case <= 303.75:
-            return "WNW";
-            break;
-        case <= 326.25:
-            return "NW";
-            break;
-        case <= 348.75:
-            return "NNW";
-            break;
-        case <= 360:
-            return "N";
-            break;
-        default:
-            Console.WriteLine("Not a compass heading");
-            break;
-    }*/
+		switch (WindDirection)
+        {
+            case double i when i >= 0 && i <= 11.25:
+                return "N";
+            case double i when i > 11.25 && i <= 33.75:
+                return "NNE";
+            case double i when i > 33.75 && i <= 56.25:
+				return "NE";
+            case double i when i > 56.25 && i <= 78.25:
+				return "ENE";
+            case double i when i > 78.25 && i <= 101.25:
+				return "E";
+            case double i when i > 101.25 && i <= 123.75:
+				return "ESE";
+            case double i when i > 123.75 && i <= 146.25:
+				return "SE";
+            case double i when i > 146.25 && i <= 168.75:
+				return "SSE";
+            case double i when i > 168.75 && i <= 191.25:
+				return "S";
+            case double i when i > 191.25 && i <= 213.75:
+				return "SSW";
+            case double i when i > 213.75 && i <= 236.25:
+				return "SW";
+            case double i when i > 236.25 && i <= 258.75:
+				return "WSW";
+            case double i when i > 258.75 && i <= 281.25:
+				return "W";
+            case double i when i > 281.25 && i <= 303.75:
+				return "WNW";
+            case double i when i > 303.75 && i <= 326.25:
+				return "NW";
+            case double i when i > 326.25 && i <= 348.75:
+				return "NNW";
+            case double i when i > 348.75 && i <= 360:
+                return "N";
+            default:
+                Console.WriteLine("Not a compass heading");
+				return "N/A";
+		}
+    }
 }
