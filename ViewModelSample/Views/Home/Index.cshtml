@@ -1,0 +1,17 @@
+﻿@model WeatherForecast
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h1>Weather Forecast for: @Model.Date</h1>
+<p>Humidity @Model.Humidity.ToString("p0")</p>
+<p>@Model.PrecipitationChance.ToString("p0") : 
+@if (Model.PrecipitationChance < .05)
+{
+    <i class="bi bi-cloud"></i>
+}
+else if(Model.PrecipitationChance < .25)
+{
+    <i class="bi bi-cloud-drizzle"></i>
+}
+</p>
